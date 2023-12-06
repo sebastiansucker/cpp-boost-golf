@@ -23,3 +23,5 @@ RUN mkdir /tmp/boost; cd /tmp/boost/; wget https://boostorg.jfrog.io/artifactory
 RUN cd /tmp/boost/boost_1_83_0; ./bootstrap.sh  --with-toolset=gcc; ./b2 --with=all -j4 install
 
 RUN rm -rf /tmp/boost
+
+RUN ldconfig
